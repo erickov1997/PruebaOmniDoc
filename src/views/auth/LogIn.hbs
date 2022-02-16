@@ -1,0 +1,50 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-4 logo">
+            <div class="logoContent">
+                <div class="imgCont">
+                </div>
+                  <img src="/images/logo2.png" alt=""  width="100%">
+                <p class="parrBuss">Hospitales y atención sanitaria</p>
+            </div>
+
+        </div>
+        <div class="col-2"></div>
+
+        <div class="col-4 login">
+            <div class="containeLogIn">
+                <h2>Bienvenido</h2>
+                <div class="loginForm">
+                    <form action="/LogIn" method="POST">
+                        <label for="" class="LbloginT">NIP</label>
+                        <input type="password" class="form form-control txtlogIn" id="nipL" name="nipL"
+                            placeholder="&#xf084; NIP" maxlength="4" style="font-family:Arial,FontAwesome"></input>
+                        <input type="submit" class="btn btn-primary btnLogIn" value="LogIn" />
+                    </form>
+                    <div class="row">
+                        <div class="col-12" style="text-align: center;">
+                            <span><span style="color:#33A5FF">No tienes una cuenta?</span><a href="/SignIn">
+                                    Registrar</a></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 msg">
+                         <span id="message">{{message}}</span>
+                    </div>
+                    
+                </div>
+            </div>
+
+        </div>
+        <div class="col-2"></div>
+    </div>
+</div>
+
+<style>
+    .navbar {
+        display: none;
+    }
+</style>

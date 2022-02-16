@@ -1,0 +1,110 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-4 logo">
+
+            <div class="logoContent">
+                <div class="imgCont">
+                </div>
+                <img src="/images/logo2.png" alt=""  width="100%">
+                <p class="parrBuss">Hospitales y atención sanitaria</p>
+            </div>
+
+        </div>
+        <div class="col-1"></div>
+
+        <div class="col-6 login">
+            <div class="containeLogIn">
+
+                <div class="loginForm">
+                    <h2>Sign In</h2>
+                    <div class="card">
+                        <div class="card-body">
+
+                            <form action="/SignIn" method="POST">
+                                <div class="row">
+                                    <div class="inputText col-6">
+                                        <label for="" class="LbloginT">Nombre</label>
+                                        <input type="text" class="form form-control txtlogIn" id="name" name="name"
+                                            autocomplete="off" placeholder="&#xf007;  Nombre"
+                                            style="font-family:Arial,FontAwesome" />
+                                    </div>
+                                    <div class="inputText col-6">
+                                        <label for="" class="LbloginT">Apellidos</label>
+                                        <input type="text" class="form form-control txtlogIn" id="lastname"
+                                             name="lastname" name="password"
+                                            placeholder="&#xf084;  Apellidos"
+                                            style="font-family:Arial,FontAwesome"></input>
+                                    </div>
+                                </div>
+
+
+                                <div class="row">
+                                    <div class="inputText col-6">
+                                        <label for="" class="LbloginT">Edad</label>
+                                        <input type="number" class="form form-control txtlogIn" id="age" name="age"
+                                             placeholder="&#xf084;  Edad"
+                                            style="font-family:Arial,FontAwesome"></input>
+                                    </div>
+                                    <div class="inputText col-6">
+                                        <label for="" class="LbloginT">Saldo inicial</label>
+                                        <input type="number" class="form form-control txtlogIn" id="InitBal"
+                                            name="InitBal"  placeholder="&#xf084;  Saldo inicial"
+                                            style="font-family:Arial,FontAwesome"></input>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="inputText col-6">
+                                        <label for="" class="LbloginT ">NIP</label>
+                                        <input type="password" class="form form-control txtlogIn" id="nip" name="nip"
+                                            maxlength="4" placeholder="&#xf084;  NIP"
+                                            style="font-family:Arial,FontAwesome"></input>
+                                    </div>
+
+
+                                    <div class="inputText col-6">
+                                        <label for="" class="LbloginT">Confirm NIP</label>
+                                        <input type="password" class="form form-control txtlogIn" id="Cnip" name="Cnip"
+                                            placeholder="&#xf084;  Confirmar NIP" style="font-family:Arial,FontAwesome"
+                                            maxlength="4"></input>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-1"></div>
+                                    <div class="col-10">
+                                        <input type="submit" class="btn btn-primary btnLogIn" value="Registar" />
+                                    </div>
+                                    <div class="col-1"></div>
+                                </div>
+                            </form>
+
+                        </div>
+                    </div>
+                </div>
+                 <div class="row">
+                <div class="col-12" style="text-align: center;">
+                    <span><span style="color:#33A5FF">Ya tienes una cuenta?</span><a href="/logIn"> Accede
+                            aqui</a></span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 msg">
+                    <span id="message">{{message}}</span>
+                    <span id="success">{{success}}</span>
+                </div>
+            </div>
+            </div>
+           
+        </div>
+
+    </div>
+    <div class="col-1"></div>
+</div>
+</div>
+
+<style>
+    .navbar {
+        display: none;
+    }
+</style>

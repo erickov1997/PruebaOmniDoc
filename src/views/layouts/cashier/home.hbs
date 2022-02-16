@@ -1,0 +1,228 @@
+<nav class="navbar navbar-expand-sm ">
+    <ul class="navbar-nav">
+        <div class="list-nav" style="margin-left: 15px;">
+            <li class="nav-item active">
+                <img src="/images/logo.jpeg" alt="" width="70px" height="60px">
+            </li>
+            <li class="nav-item active">
+                <span class="nav-text">OmniDoc</span>
+            </li>
+        </div>
+        <div class="list-nav" style="margin-right: 15px;">
+            <li class="nav-item">
+                <span class="nav-text"> {{client.nombre}} {{client.apellidos}} </span>
+            </li>
+            
+            <li class="nav-item">
+                <a class="nav-text" href="/logIn">Exit</a>
+            </li>
+        </div>
+
+    </ul>
+</nav>
+<div class="container-fluid">
+    <div class="row" style="margin-top: 70px; flex-wrap:wrap">
+        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12  col-12">
+            <div class="card" style="background: #FFB833;">
+                <div class="card-body text-cahs">
+                    <div class="row card-text">
+                        <span class="cont-icon"><i class="fa-solid fa-money-bill-wave"></i></span>
+                        <span class="">Consultar saldo </i></span>
+                    </div>
+                    <div class="row card-btn-content">
+                        <button class="btn-opt" style="background:#FF9633;" data-toggle="modal"
+                            data-target="#ConsultSaldo">Click me <i class="fa-solid fa-arrow-pointer"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 col-12">
+            <div class="card" style="background: #56F311;">
+                <div class="card-body text-cahs">
+                    <div class="row card-text">
+                        <span class="cont-icon"><i class="fa-solid fa-money-bill-wave"></i></span>
+                        <span class="">Depositar Dinero</i></span>
+                    </div>
+                    <div class="row card-btn-content">
+                        <button class="btn-opt" style="background: #66FB24;" data-toggle="modal"
+                            data-target="#deposit">Click me <i class="fa-solid fa-arrow-pointer"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 col-12">
+            <div class="card" style="background: #7F11F3;">
+                <div class="card-body text-cahs">
+                    <div class="row card-text">
+                        <span class="cont-icon"><i class="fa-solid fa-money-bill-wave"></i></span>
+                        <span class="">Retiro  cuenta Debito </i></span>
+                    </div>
+                    <div class="row card-btn-content">
+                        <button class="btn-opt" style="background: #7106E3;" data-toggle="modal"
+                            data-target="#retirar">Click me <i class="fa-solid fa-arrow-pointer"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 col-12">
+            <div class="card" style="background: #FF3358;">
+                <div class="card-body text-cahs">
+                    <div class="row card-text">
+                        <span class="cont-icon"><i class="fa-solid fa-money-bill-wave"></i></span>
+                        <span class="">Retiro cuenta Credito </i></span>
+                    </div>
+                    <div class="row card-btn-content">
+                        <button class="btn-opt" style="background: #FF3333;" data-toggle="modal"
+                            data-target="#retirarCredit">Click me <i class="fa-solid fa-arrow-pointer"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-3 col-md-3  col-sm-6 col-xs-12 col-12">
+            <div class="card" style="background: #E3066A;">
+                <div class="card-body text-cahs">
+                    <div class="row card-text">
+                        <span class="cont-icon"><i class="fa-brands fa-cc-visa"></i></span>
+                        <span class="">Pagar Cuenta Credito</i></span>
+                    </div>
+                    <div class="row card-btn-content">
+                        <button class="btn-opt" style="background: #E30632;" data-toggle="modal"
+                            data-target="#pay">Click me
+                            <i class="fa-solid fa-arrow-pointer"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row" style="justify-content: center;">
+        <span id="success">{{success}}</span>
+        <span id="message">{{message}}</span>
+    </div>
+
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="ConsultSaldo" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Consultar Saldo</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>Tu saldo actual cuenta debito es de :<b> ${{client.saldo}}</b></p>
+                <p>Tu saldo actual cuenta credito es de : <b>${{client.saldoCred}}</b></p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="deposit" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel2"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel2">Depositar Dinero</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <span>Ingrese la cantidad a depositar :</span>
+                <form action="/DepositMoney/{{client.idClient}}" method="post">
+                    <input type="number" id="moneyD" name="moneyD" class="form form-control ">
+                    <button type="submit" class="btn btn-primary" style="margin-top: 15px;">Depositar </button>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="retirar" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel2"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel2">Retiro dinero cuenta Debito</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <span>Ingrese la cantidad a retirar :</span>
+                <form action="/withdrawcash/{{client.idClient}}/saldo/retiro" method="post">
+                    <input type="number" class="form form-control" name="moneyR">
+                    <button type="submit" class="btn btn-primary" style="margin-top: 15px;">Retirar</button>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="retirarCredit" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel2"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel2">Retiro dinero cuenta Credito</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <span>Ingrese la cantidad a retirar :</span>
+                <form action="/withdrawcash/{{client.idClient}}/saldoCred/retiro" method="post">
+                    <input type="number" class="form form-control" name="moneyR">
+                    <button type="submit" class="btn btn-primary" style="margin-top: 15px;">Retirar</button>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="pay" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel2" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel2">Pagar con cuenta de credito</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <span>Ingrese la cantidad a pagar :</span>
+                <form action="/withdrawcash/{{client.idClient}}/saldoCred/pago" method="post">
+                    <input type="number" class="form form-control" name="moneyR">
+                    <button type="submit" class="btn btn-primary" style="margin-top: 15px;">Retirar</button>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
